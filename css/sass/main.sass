@@ -97,13 +97,24 @@ body
 			text-align: left
 			.top_title,
 			.bottom_title
-				font-size: 50px
+				font-size: 48px
 				font-weight: 300
 				margin-left: 10%
 			p
 				margin-left: 10%
 .products
-	padding: 25px 15px
+	padding: 25px 15px 15px 15px
+	position: relative
+	&::after
+		content: ""
+		position: absolute
+		width: 30%
+		height: 5px
+		color: red
+		left: 50%
+		margin-left: -75px
+		margin-top: 50px
+		z-index: 20
 	.prod_title
 		text-transform: uppercase
 		color: #002258
@@ -133,16 +144,15 @@ body
 				background-color: rgba(0,0,0,.7)
 				width: 100%
 				padding: 15px 0px
-				transition: .5s all
 				a
 					color: #fff
 					text-transform: uppercase
 					font-size: 14px
 					font-weight: 300
 					text-decoration: none
+					transition: .5s all
 					&:hover
-						.prod_bottom
-							padding-bottom: 30px
+						
 		.prod_item_1
 			background-image: url("../img/prod_1.jpg")
 		.prod_item_2
@@ -154,3 +164,43 @@ body
 		.prod_item_5
 			background-image: url("../img/prod_5.jpg")
 .about
+	padding: 30px 0px
+	.portfolio_wrap,
+	.about_wrap
+		background-repeat: no-repeat
+		background-size: cover
+		box-shadow: 0 0 0 500px rgba(0,0,0,.5) inset
+		background-color: #fff
+		padding: 20% 0
+		text-align: center
+		a
+			text-decoration: none
+			text-transform: uppercase
+			color: #fff
+			font-weight: 300
+			font-size: 36px
+	.portfolio_wrap
+		background-image: url("../img/portfolio.jpg")
+	.about_wrap
+		background-image: url("../img/about.jpg")
+.footer
+	background-color: #011432
+	padding: 20px 0px
+	color: #88919f
+	.footer_links
+		text-align: right
+		ul
+			list-style-type: none
+			li
+				display: inline-block
+				a
+					text-transform: uppercase
+					text-decoration: none
+					color: #88919f
+					border-right: 1px solid #88919f
+					padding: 0px 20px
+					a:last-child
+						padding-right: 0px
+						border-right: none
+
+
